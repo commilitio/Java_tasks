@@ -2,8 +2,9 @@
     Napisz program, który rekurencyjnie oblicza kolejne wartości n! dla n = 10 i wynik wyświetla na ekranie
     komputera.
 
-    ps. silnia z 4! = 1*2*3*4
+    (silnia z 4! = 1*2*3*4)
 
+    rekurencja - ang. recursion
  */
 
 
@@ -13,26 +14,26 @@ public class RekurencjaSilnia {
         int n = 10;
 
         for (int i = 1; i <= n; i++) {
-            System.out.println(i + "! = " + silnia(i));
+            System.out.println(i + "! = " + factorial(i));
         }
     }
 
 
-    public static int silnia(int liczba) {
-        if (liczba > 2)                                 // zaczynamy od 2
-            return liczba * silnia(liczba - 1);
-        return liczba;                                  // jesli liczba jest <=2 to zwroc po prostu tą liczbe
+    public static int factorial(int number) {
+        if (number > 2)                                     // we start from 2
+            return number * factorial(number - 1);
+        return number;                                      // if 'number' is <=2 then just return this 'number'
 
 
 
-        /*       bez rekurencji:
+        /*       example without recursion:
 
-        int siln = 1;
-        for (int i = 1; i <= liczba; i++) {              // oblicza silnie dla kazdej liczby < 10 (n)
+        int factorial = 1;
+        for (int i = 1; i <= number; i++) {                     // calculates factorial for every 'number' < 10 (n)
             System.out.print("silnia z " + i + " to ");
-            System.out.println(siln *= i);               // siln = 1*1; pozniej 1*2; 2*3; 3*4 .....
+            System.out.println(factorial *= i);                  // factorial = 1*1; then 1*2; 2*3; 3*4 .....
         }
-        return siln;
+        return factorial;
 
          */
     }

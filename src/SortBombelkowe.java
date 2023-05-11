@@ -19,14 +19,14 @@ import java.util.Arrays;
 public class SortBombelkowe {
     public static void main(String[] args) {
 
-        int[] tablica = {5, 4, 7, 2, 3, 9, 1, 11, 10};       // bedziemy sortowac ta tablice
+        int[] tablica = {5, 4, 7, 2, 3, 9, 1, 11, 10};
 
         int pomoc;
         boolean flagaZmiany = true;
 
         System.out.println("tablica przed sortowaniem: " + Arrays.toString(tablica));
 
-        int skracamy = tablica.length;             // *patrz nizej
+        int skracamy = tablica.length;
 
         while (flagaZmiany) {
             flagaZmiany = false;
@@ -37,7 +37,7 @@ public class SortBombelkowe {
                     tablica[i + 1] = pomoc;
                     flagaZmiany = true;
                 }
-                skracamy--;                     // nie mam pewnosci, ze to 'skracamy--' dziala
+                skracamy--;
             }
         }
         System.out.println("tablica po sortowaniu: " + Arrays.toString(tablica));

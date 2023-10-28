@@ -17,7 +17,7 @@ public class CyfryDanejLiczby {
         String wynik = String.valueOf(liczba);                          // przeksztalcam ją w String
         System.out.println(Arrays.toString((wynik.toCharArray())));
 
-                                        // lub
+        // lub
 
 
         char[] tablica = wynik.toCharArray();           /* .toCharArray() pobiera poszczegolne char w
@@ -35,9 +35,8 @@ public class CyfryDanejLiczby {
                 przypisz liczbie wartość części całkowitej z dzielenia liczby przez 10
                 }
          */
-   }
+    }
 }
-
 
 
 

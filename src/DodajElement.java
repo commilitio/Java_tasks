@@ -45,6 +45,31 @@ public class DodajElement {
 
     public static void main(String[] args) {
 
+
+
+        // tablica do posortowania
+        int[] tablica = {75, 6, 8, 44, 32, 13, 56, 17, 52, 23, 9, 42, 21, 37, 20, 11, 30, 51, 4};
+
+        int dodaj = 18;                                                 // tą zmienna bedziemy dodawac do posortowanej tablicy
+
+        int [] newArray = new int[tablica.length + 1];                      // nowa tablica, wieksza od poprzedniej o 1 element
+
+        System.arraycopy(tablica, 0, newArray, 0, tablica.length);
+
+        newArray[newArray.length - 1] = dodaj;                              // dodaje element 'dodaj' na koniec tablicy
+
+        newArray = Arrays.stream(newArray).sorted().toArray();              // sortuje ją
+
+        System.out.println(Arrays.toString(tablica));
+        System.out.println("po sorcie:");
+        System.out.println(Arrays.toString(newArray));
+
+
+
+
+/*                      inne rozwiazanie, troche zagmatwane  ;)
+
+
         // tablica do posortowania
         int[] tablica = {75, 6, 8, 44, 32, 13, 56, 17, 52, 23, 9, 42, 21, 37, 20, 11, 30, 51, 4};
 
@@ -71,20 +96,24 @@ public class DodajElement {
 
         // ponizej zliczam na ktorej pozycji OD POCZATKU bedzie nalezalo wkleic 'dodaj' (miedzy 17 a 20)
         int pomoc3 = 0;
-        for (int i = 0; i < nowa.length-1; i++) {        // .length - 1
+        for (int i = 0; i < nowa.length - 1; i++) {        // .length - 1
             if (nowa[i] < dodaj)                         // jest 7 elementow mniejszych od 'dodaj'
                 pomoc3++;                                // zliczam je
         }
-        System.out.println("w NOWA TABLICA elementow wiekszych od DODAJ jest: " + pomoc3);
+        System.out.println("w NOWA TABLICA elementow mniejszych od DODAJ jest: " + pomoc3);
 
 
-        for (int i = nowa.length-1; i > pomoc3; i--) {      // zaczynam od konca tablicy
-            nowa[i] = nowa[i-1];                            // przesuwam je w prawo
+        for (int i = nowa.length - 1; i > pomoc3; i--) {      // zaczynam od konca tablicy
+            nowa[i] = nowa[i - 1];                            // przesuwam je w prawo
         }
 
         nowa[pomoc3] = dodaj;                               // podstawiam '18' na wolne miejsce (stanowisko 7)
 
         System.out.println(Arrays.toString(nowa));
+
+
+
+ */
     }
 }
 

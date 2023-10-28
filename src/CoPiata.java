@@ -28,13 +28,10 @@ public class CoPiata {
 
     public CoPiata() {
 
-        int suma;
-        int licznik;
-        String wynik;
+        int suma = 0;
+        int licznik = 0;
+        String wynik = "";                  // wyswietlac sie bedzie String a nie int !
 
-        wynik = "";                         // wyswietlac sie bedzie String a nie int !
-        suma = 0;
-        licznik = 0;
 
         while (licznik < 50) {
             licznik++;                      // licznik sobie rosnie od 1 do 50

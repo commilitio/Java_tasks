@@ -12,17 +12,16 @@
 public class Gwiazdki {
     public static void main(String[] args) {
 
-        String x= "";
 
-        for (int i = 1; i < 5; i++) {                   // i < 5
-            for (int j = 1; j < i; j++) {               // j < i
-                System.out.println(x);
-                x += "*";
+        for (int i = 0; i <= 5; i++) {                   // i < 5
+            for (int j = 0; j < i; j++) {               // j < i
+                System.out.print("*");
             }
+            System.out.println();
         }
-        System.out.println("\n");
 
 
+        System.out.println();
 
 
 /*

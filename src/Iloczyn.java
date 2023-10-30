@@ -13,12 +13,11 @@ public class Iloczyn {
     }
 
     public Iloczyn(){
-        String dlugoscOdp = JOptionPane.showInputDialog("Jakiej dlugosci bedzie ciąg liczb?");
-        int dlugosc = Integer.parseInt(dlugoscOdp);
+        int dlugoscOdp = Integer.parseInt(JOptionPane.showInputDialog("Jakiej dlugosci bedzie ciąg liczb?"));
 
         int x = 1;                      // 1 !!!  bo mnozenie przez 0 sie nie uda
 
-        for (int i = 0; i < dlugosc; i++) {
+        for (int i = 0; i < dlugoscOdp; i++) {
             int oops = Integer.parseInt(JOptionPane.showInputDialog("Wpisz cyfrę"));
             x *= oops;
         }

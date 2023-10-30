@@ -38,7 +38,24 @@ public class Palindrom {
     }
 }
 
+/*         EDIT:             EWENTUALNIE ROZWIAZANIE Z UZYCIEM PĘTLI FOR (chyba czytelniejsze)
 
+
+        String slowo = JOptionPane.showInputDialog("wpisz slowo: ");
+
+        char[] tablo = slowo.toCharArray();
+        char[] tablo2 = new char[tablo.length];
+
+        for (int i = 0; i < tablo.length; i++) {
+            tablo2[i] = tablo[tablo.length - 1 - i];     // -i: Odejmuje bieżący indeks 'i' od poprzedniego wyniku, co daje indeks elementu w odwrotnej kolejności
+        }
+
+        if (Arrays.equals(tablo, tablo2))
+            JOptionPane.showMessageDialog(null, "podane slowo jest palindromem");
+        else
+            JOptionPane.showMessageDialog(null, "podane slowo nie jest palindromem");
+
+ */
 
 
 

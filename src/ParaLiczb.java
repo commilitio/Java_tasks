@@ -9,8 +9,8 @@ public class ParaLiczb {
 
 
         for (int i = 0; i < liczby.length; i++) {
-            for (int j = i+1; j < liczby.length; j++) {         // i+1 porownanie zaczyna sie od liczby kolejnej
-                if (liczby[i]==liczby[j])
+            for (int j = i + 1; j < liczby.length; j++) {         // i+1 porownanie zaczyna sie od liczby kolejnej
+                if (liczby[i] == liczby[j])
                     System.out.println(liczby[i]);              // drukuje powtarzajace sie liczby
             }
         }
@@ -24,7 +24,21 @@ public class ParaLiczb {
     }
 }
 
+/*              EDIT:           ALTERNATYWNE ROZWIAZANIE
 
+
+        Arrays.sort(liczby);                                        sortujemy tablice
+
+        List <Integer> pomoc = new ArrayList<>();                   tu bedziemy dodawac znalezione liczby
+
+        for (int i = 0; i < liczby.length-1; i++) {
+            if (liczby[i] == liczby[i+1])                           porownujemy po kolei kazda liczbe do nastepnej z listy
+                pomoc.add(liczby[i]);
+                System.out.println(liczby[i]);
+        }
+
+
+ */
 
 
 

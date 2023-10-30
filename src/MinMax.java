@@ -21,12 +21,10 @@ public class MinMax {
 
     }
 
-    public MinMax(){                                                    // konstruktor klasy
+    public MinMax(){                                                        // konstruktor klasy
         int max;
         int min;
-        int odp;
-
-        odp = Integer.parseInt(showInputDialog ("Podaj liczbę"));       // parse !!
+        int odp = Integer.parseInt(showInputDialog ("Podaj liczbę"));       // parse !!
 
 
         max = odp;                                          // tu beda wysylane i zapisywane obowiazujace max i min

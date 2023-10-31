@@ -38,6 +38,28 @@ public class ParaLiczb {
         }
 
 
+
+                EDIT:               ROZWIAZANIE Z POMOCA STRUMIENI !!
+
+
+        Arrays.stream(liczby)
+                .boxed()
+                .filter(liczba -> Arrays.stream(liczby).filter(x -> x == liczba).count() > 1)
+                .distinct()
+                .forEach(x -> System.out.println(x));
+
+      wyjasnienie do powyzszego:
+        - .boxed - aby przekształcić strumień liczb całkowitych na strumień liczb całkowitych opakowanych w typ opakowujący, np. Integer
+        - .distinct -  aby wyświetlić unikalne powtarzające się liczby
+        - Arrays.stream(numbers) konwertuje tablicę numbers na strumień.
+        - .filter(x -> x == number) służy do filtrowania elementów strumienia zgodnie z warunkiem, że x jest równy number.
+        - .count() zwraca liczbę elementów spełniających warunek w strumieniu.
+        - > 1 oznacza, że liczba elementów, które spełniają ten warunek, jest większa niż 1, czyli istnieje para liczb jednakowych.
+
+
+
+
+
  */
 
 

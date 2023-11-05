@@ -15,7 +15,7 @@ public class SwitchCase {
         System.out.println("wpisz teraz nazwe zwierza: ");
         String zwierz = odp.nextLine();                     // odczytuje nastepna linie
 
-        if (zwierz.equalsIgnoreCase("leniwiecow"))     // jesli uzytkownik poda oczekiwana przeze mnie odp
+        if (zwierz.equalsIgnoreCase("leniwiecbiow"))     // jesli uzytkownik poda oczekiwana przeze mnie odp
             System.out.println("that shit's dingo");        // wtedy zignoruje instrukcje 'case' i wykona tą linie
         else{
             switch (zwierz){

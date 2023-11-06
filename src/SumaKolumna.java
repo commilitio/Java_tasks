@@ -29,6 +29,7 @@ public class SumaKolumna {
         int kolumna = 7;
 
         int[][] tablica = new int[wiersz][kolumna];            // tabl dwuwymiarowa na 7 kolumn po 3 wiersze
+        int [] sumaKol = new int[7];                // tablica na sumę kolumn; jest dlugosci najdluzszego wiersza
 
 
 
@@ -40,23 +41,15 @@ public class SumaKolumna {
 
                 sumaWiersza += tablica[i][j];
 
+                sumaKol[j] += tablica[i][j];                // liczy sume liczb w poszczegolnych kolumnach
             }
             System.out.println("suma wiersza " + sumaWiersza);
             // println; by wyswietlilo wiersz pod wierszem
         }
 
-        System.out.println("");
-
-
-        int size = tablica[0].length;           // okreslam dlugosc najdluszego wiersza tablicy (tu sa takie same)
-        int [] sumaKol = new int[size];          // tablica na sumę kolumn; jest dlugosci najdluzszego wiersza
-
-        for (int i = 0; i < tablica.length; i++) {
-            for (int j = 0; j < tablica[i].length; j++) {
-                sumaKol[j] += tablica[i][j];                // liczy sume liczb dodatnich w calej tab
-            }
-        }
         System.out.println("suma poszczegolnych kolumn: " + Arrays.toString(sumaKol));
+
+
     }
 }
 

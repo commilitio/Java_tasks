@@ -17,30 +17,24 @@ public class DodatnieWkolumnie {
         int [][] tablica = new int[5][6];
 
         Random random = new Random();
+        int dodatnie = 0;                   // bedzie zliczac liczby dodatnie w tabeli
+        int [] sumaKol = new int[6];
+
 
         for (int i = 0; i < tablica.length; i++) {
             for (int j = 0; j < tablica[i].length; j++) {
-                tablica[i][j] = random.nextInt(-100, 100);      // wypelnia tablice losowymi liczbami
+                tablica[i][j] = random.nextInt(200)-100;      // wypelnia tablice losowymi liczbami
                 System.out.print(tablica[i][j] + " ");                      // drukuje obecny wiersz tablicy
+                if (tablica[i][j] > 0){
+                    sumaKol[j] += tablica[i][j];            // sumuje liczby tylko te ktore sa dodatnie
+                    dodatnie++;                             // zlicza ilosc liczb dodatnich w calej tabeli
+                }
             }
             System.out.println();                                           // drukuje 'enter' po pelnym wierszu
         }
 
 
-        int dodatnie = 0;
 
-        int size = tablica[0].length;              // patrz plik 'sumaKolumna'
-        int [] sumaKol = new int[size];
-
-        for (int i = 0; i < tablica.length; i++) {
-            for (int j = 0; j < tablica[i].length; j++) {
-                if (tablica[i][j] > 0){
-                    sumaKol[j] += tablica[i][j];    // sumuje liczby tylko te ktore sa dodatnie
-                    dodatnie++;                     // zlicza ilosc liczb dodatnich w calej tabeli
-                }
-            }
-
-        }
         System.out.println(" ");
         System.out.println("suma dodatnich liczb w kolejnych kolumnach: " + Arrays.toString(sumaKol)+ "\n");
 

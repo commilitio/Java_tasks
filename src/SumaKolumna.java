@@ -1,10 +1,10 @@
 
 /*
-    stworz apke do obliczania sumy elementów w każdej kolumnie oraz wierszu
+    stworz apke do obliczania sumy elementów w każdej kolumnie oraz wierszu tablicy 2D
 
 
     Arrays.toString()   !!!!!!
-    tablica[i][j] = x[(i*kolumna)+j];        przysylamy tablice 1d do 2d !!!
+    tablica[i][j] = x[(i*kolumna)+j];        konwertujemy tablice 1d do 2d !!!
 
 
  */
